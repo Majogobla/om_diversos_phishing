@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    :root {
+      font-family: "Times New Roman", Times, serif;
+    }
+
+    @media (min-width: 640px) {
+      #app {
+        background-image: url(./img/bg.svg)
+      }
+    }
+
+    .spinner {
+      margin: 50px auto 0;
+      width: 70px;
+      text-align: center;
+    }
+    
+    .spinner > div {
+      width: 18px;
+      height: 18px;
+      background-color: #333;
+    
+      border-radius: 100%;
+      display: inline-block;
+      -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+      animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    }
+    
+    .spinner .bounce1 {
+      -webkit-animation-delay: -0.32s;
+      animation-delay: -0.32s;
+    }
+    
+    .spinner .bounce2 {
+      -webkit-animation-delay: -0.16s;
+      animation-delay: -0.16s;
+    }
+    
+    @-webkit-keyframes sk-bouncedelay {
+      0%, 80%, 100% { -webkit-transform: scale(0) }
+      40% { -webkit-transform: scale(1.0) }
+    }
+    
+    @keyframes sk-bouncedelay {
+      0%, 80%, 100% { 
+        -webkit-transform: scale(0);
+        transform: scale(0);
+      } 40% { 
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+      }
+    }
+  </style>
+
+  <title>Reset Password</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <div id="app" class="min-h-screen w-full bg-white sm:bg-cover sm:bg-center flex flex-col">
+    <div class="w-full sm:max-w-md bg-white sm:mx-auto sm:mt-10 p-8 sm:shadow-xl">
+      <img src="./img/account-normal.png" alt="zoho logo" class="max-w-32 mb-4">
+
+      <div id="inputs" class="w-full">
+        <h1 class="text-xl">Cambiar Contraseña</h1>
+        <p class="text-md mb-8">Introduce la contraseña actual de tu cuenta de Zoho, luego introduce la nueva contraseña y repítela, si coinciden, tu contraseña será modificada.</p>
+        
+        <input id="old_password" type="password" class="w-full p-2 border border-gray-200 bg-[#F9F9F9]" placeholder="Tu contraseña actual">
+        <input id="new_password" type="password" class="w-full p-2 border border-gray-200 bg-[#F9F9F9] mt-3" placeholder="Nueva contraseña">
+        <input id="new_password_2" type="password" class="w-full p-2 border border-gray-200 bg-[#F9F9F9] mt-3" placeholder="Repetir nueva contraseña">
+
+        <button id="submit_button" class="w-full bg-blue-200 cursor-not-allowed p-2 text-white font-bold rounded-md mt-8">Cambiar Contraseña</button>
+      </div>
+    </div>
+
+    <footer class="mb-4 mt-auto text-center text-sm font-light">© 2024, Zoho Corporation Pvt. Ltd. All Rights Reserved.</footer>
+  </div>
+  
+  <script src="./js/app.js"></script>
+</body>
+</html>
